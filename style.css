@@ -1,0 +1,598 @@
+body{
+    margin:0;
+    padding:20px;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    background:#0f0f0f;
+    overflow-x:hidden;
+}
+
+
+/* RED CINEMATIC GLOW */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,0,0,0.35);
+    filter:blur(180px);
+    top:-150px;
+    left:-150px;
+    animation:redGlow1 10s infinite alternate;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,50,50,0.25);
+    filter:blur(180px);
+    bottom:-150px;
+    right:-150px;
+    animation:redGlow2 12s infinite alternate;
+    z-index:-2;
+}
+
+
+@keyframes redGlow1{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(250px,180px);
+    }
+}
+
+
+@keyframes redGlow2{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(-250px,-180px);
+    }
+}
+
+
+/* MAIN CONTAINER */
+
+.container{
+
+    background:rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    width:95%;
+    max-width:1100px;
+
+    margin:20px auto;
+
+    box-shadow:
+    0 0 30px rgba(255,0,0,0.15);
+
+    animation:fadeIn 1s ease;
+}
+
+
+/* HEADINGS */
+
+h1{
+
+    color:#ff5a5a;
+
+    font-size:48px;
+
+    text-shadow:
+    0 0 10px rgba(255,0,0,0.6),
+    0 0 20px rgba(255,0,0,0.4);
+}
+
+
+h2{
+    color:#ff5a5a;
+}
+
+
+/* MESSAGE */
+
+.message{
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    color:white;
+
+    white-space:pre-line;
+}
+
+
+/* BUTTON */
+
+button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#ff4040;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    margin:10px;
+
+    transition:0.3s;
+}
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 20px rgba(255,0,0,0.5);
+}
+
+
+/* SLIDESHOW */
+
+.slideshow{
+
+    margin:25px auto;
+}
+
+
+.slideshow img{
+
+    width:100%;
+
+    max-width:900px;
+
+    height:650px;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.25);
+
+    transition:opacity 0.5s ease;
+}
+
+
+/* NOODLES INTRO */
+
+#intro{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+
+#introText{
+
+    font-size:80px;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#ff5a5a;
+
+    text-shadow:
+    0 0 20px red,
+    0 0 40px red;
+
+    animation:introPulse 1.5s infinite alternate;
+}
+
+
+@keyframes introPulse{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+}
+
+
+/* PAGE 3 VIDEO */
+
+.video-box{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+
+#proposalVideo{
+
+    width:100%;
+
+    max-height:650px;
+
+    border-radius:20px;
+
+    object-fit:contain;
+
+    background:black;
+
+    box-shadow:
+    0 0 30px rgba(255,0,0,0.35);
+}
+
+
+/* AFTER VIDEO */
+
+#afterVideo{
+
+    animation:fadeIn 1.5s ease;
+}
+
+
+.love-paragraph{
+
+    margin-top:35px;
+
+    margin-bottom:30px;
+
+    padding:10px;
+}
+
+
+/* PROPOSAL IMAGE */
+
+.proposal-animation{
+
+    text-align:center;
+
+    margin:30px 0;
+}
+
+
+.proposal-animation img{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 0 25px rgba(255,0,0,0.3);
+
+    animation:proposalGlow 2s infinite alternate;
+}
+
+
+@keyframes proposalGlow{
+
+    from{
+        transform:scale(1);
+        box-shadow:0 0 20px rgba(255,0,0,0.2);
+    }
+
+    to{
+        transform:scale(1.02);
+        box-shadow:0 0 35px rgba(255,0,0,0.5);
+    }
+}
+
+
+/* PROPOSAL BUTTONS */
+
+#proposalButtons{
+
+    margin-top:20px;
+
+    position:relative;
+
+    min-height:80px;
+}
+
+
+.yes-button{
+
+    background:#ff4040;
+}
+
+
+.no-button{
+
+    background:#555;
+
+    position:relative;
+}
+
+
+/* FINAL PAGE */
+
+#finalPage{
+
+    animation:fadeIn 2s ease;
+}
+
+
+.timer-title{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-top:35px;
+
+    margin-bottom:15px;
+}
+
+
+#timer{
+
+    font-size:30px;
+
+    color:#ff5a5a;
+
+    margin-top:20px;
+
+    line-height:1.8;
+
+    text-shadow:
+    0 0 10px rgba(255,0,0,0.5);
+}
+
+
+/* MUSIC BUTTON */
+
+.music-box{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    z-index:1000;
+}
+
+
+.music-box button{
+
+    font-size:16px;
+
+    padding:12px 20px;
+}
+
+
+/* CRYING SCREEN */
+
+#cryingEffect{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(
+        circle,
+        #250000,
+        #050000
+    );
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:10000;
+
+    animation:cryScreen 0.8s ease;
+}
+
+
+.crying-face{
+
+    font-size:140px;
+
+    animation:crying 1s infinite alternate;
+}
+
+
+.tears{
+
+    font-size:35px;
+
+    letter-spacing:15px;
+
+    animation:fallingTears 1.5s infinite;
+}
+
+
+@keyframes crying{
+
+    from{
+        transform:translateY(0) rotate(-5deg);
+    }
+
+    to{
+        transform:translateY(-12px) rotate(5deg);
+    }
+}
+
+
+@keyframes fallingTears{
+
+    0%{
+        transform:translateY(-10px);
+        opacity:0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(25px);
+        opacity:0.3;
+    }
+}
+
+
+@keyframes cryScreen{
+
+    from{
+        opacity:0;
+        transform:scale(1.05);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* FADE */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    body{
+        padding:10px;
+    }
+
+
+    .container{
+
+        padding:20px;
+
+        width:calc(100% - 40px);
+    }
+
+
+    h1{
+        font-size:32px;
+    }
+
+
+    h2{
+        font-size:24px;
+    }
+
+
+    .message{
+
+        font-size:18px;
+
+        line-height:1.7;
+    }
+
+
+    .slideshow img{
+
+        height:400px;
+    }
+
+
+    #introText{
+
+        font-size:45px;
+    }
+
+
+    #proposalVideo{
+
+        max-height:450px;
+    }
+
+
+    #timer{
+
+        font-size:22px;
+    }
+
+
+    .music-box{
+
+        bottom:10px;
+        right:10px;
+    }
+
+
+    .crying-face{
+
+        font-size:100px;
+    }
+}

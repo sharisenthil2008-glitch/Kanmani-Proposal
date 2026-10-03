@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>❤️ Kanmani ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  var password = prompt("Enter the Secret Password to view this page:");
+  if (password !== "Noodles04") { // Unga secret password-a inga maathikkonga
+    alert("Incorrect Password!");
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Access Denied! Incorrect Password.</h2>";
+    window.stop();
+  }
+</script>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div class="container" id="page1">  
+
+    <h1>Hari ❤️ Kanmani</h1>
+
+    <p class="message">
+        Welcome To Our Story ❤️
+    </p>
+
+    <div class="slideshow">
+        <img id="slide1" src="images/photo1.jpg" alt="Memory Photo">
+    </div>
+
+    <button onclick="openPage2()">
+        Click Here ❤️
+    </button>
+
+</div>
+
+
+<!-- NOODLES INTRO -->
+
+<div id="intro" style="display:none;">
+    <h1 id="introText">🍜 NOODLES 🍜</h1>
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="container" id="page2" style="display:none;">
+
+    <h1>🍜 Our Beautiful Memories 🍜</h1>
+
+    <p class="message">
+        Every memory with you is special ❤️
+    </p>
+
+    <div class="slideshow">
+        <img id="slide2" src="images/photo6.jpg" alt="Memory Photo">
+    </div>
+
+    <button onclick="openPage3()">
+        Next ❤️
+    </button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="container" id="page3" style="display:none;">
+
+    <h1>💌 For My Noodles Manda ❤️</h1>
+
+    <!-- VIDEO -->
+
+    <div class="video-box">
+
+        <video id="proposalVideo" controls playsinline>
+            <source src="videos/proposal.mp4" type="video/mp4">
+            Your browser does not support the video.
+        </video>
+
+    </div>
+
+
+    <!-- AFTER VIDEO -->
+
+    <div id="afterVideo" style="display:none;">
+
+        <p class="message love-paragraph">
+
+            Nalla purinjiko, Enoda life la enaku kedacha oru gift na adhu ne dhan. ❤️
+
+            Evlovo persons ah life la cross pani vandhuruke, ana unkooda irukumbothu kedaikra comfort feel Vera yarkooda irukumbothum varala.
+
+            Enoda heart la irukura onoda place ah life la yaaralum replace pana mudiyathu.
+
+            Ne dha enoda only best person uh! 🥺❤️
+
+            Onna evlovo times hurt paniruke dhana? Sorry.
+
+            Ini onna hurt pana mata.
+
+            Nee enna purinjukitta mari vera yarum enna purinjukittathu illa.
+
+            Athanala unkitta oru request ve kekkuran...
+
+            Life la endha situation layum nee enna vitu poirathaaa.
+
+            Pleaseee 🥺❤️
+
+        </p>
+
+
+        <!-- PROPOSAL IMAGE -->
+
+        <div class="proposal-animation">
+
+            <img src="images/proposal.png" alt="Proposal Scene">
+
+        </div>
+
+
+        <!-- YES / NO -->
+
+        <h2>
+            ❤️ Will You Stay With Me Forever? ❤️
+        </h2>
+
+        <div id="proposalButtons">
+
+            <button class="yes-button" onclick="showYes()">
+                YES ❤️
+            </button>
+
+            <button class="no-button" id="noButton" onclick="showNo()">
+                NO 😜
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- FINAL PAGE -->
+
+<div class="container" id="finalPage" style="display:none;">
+
+    <h1>
+        13 years of friendship ❤️
+        <br>
+        5 years of love ❤️
+    </h1>
+
+    <h2>
+        You are my favorite person
+        and always will be ❤️
+    </h2>
+
+    <div class="timer-title">
+        Our Journey ❤️
+    </div>
+
+    <div id="timer">
+        0 Days ❤️ 0 Hours ❤️ 0 Minutes ❤️ 0 Seconds ❤️
+    </div>
+
+</div>
+
+
+<!-- SINGLE MUSIC -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="music/finalsong.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- MUSIC BUTTON -->
+
+<div class="music-box">
+
+    <button id="musicButton" onclick="toggleMusic()">
+        🎵 Play Music
+    </button>
+
+</div>
+
+
+<!-- CRYING EFFECT -->
+
+<div id="cryingEffect" style="display:none;">
+
+    <div class="crying-face">
+        😭
+    </div>
+
+    <h1>💔 Noodles Manda 💔</h1>
+
+    <h2>Please Think Again 🥺❤️</h2>
+
+    <div class="tears">
+        💧 💧 💧 💧 💧
+    </div>
+
+    <button onclick="location.reload()">
+        Come Back ❤️
+    </button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
